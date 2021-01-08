@@ -22,8 +22,10 @@ export class UsersService {
     return this.userModel.find().exec();
   }
 
-  async findOne(searchUserDto: SearchUserDto): Promise<User> {
-    return this.userModel.find({email: searchUserDto.email, password: searchUserDto.password}).exec();
+  async findOne(username: string): Promise<User> {
+    const userQuery = await this.userModel.findOne({ username }).exec();
+    const user = userQuery.toObject();
+    return { ...user, _id: user._id.toString() };
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
