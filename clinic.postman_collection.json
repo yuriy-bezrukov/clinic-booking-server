@@ -9,13 +9,13 @@
 			"name": "users",
 			"item": [
 				{
-					"name": "add cat Copy",
+					"name": "add John",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Vasiy\",\r\n    \"email\": \"qwe@qqwe.qw\",\r\n    \"password\": \"qweqweqwe\",\r\n    \"role\": \"admin\"\r\n}",
+							"raw": "{\r\n    \"username\": \"john\",\r\n    \"email\": \"qwe@qqwe.qw\",\r\n    \"password\": \"super-pass\",\r\n    \"role\": \"admin\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -35,7 +35,7 @@
 					"response": []
 				},
 				{
-					"name": "get cats Copy",
+					"name": "get",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -118,6 +118,83 @@
 							],
 							"path": [
 								"cats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"john\",\r\n    \"password\": \"super-pass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOiI1ZmY4ZDhmYTMyODVkOTQ3NzQ4NDRkM2YiLCJpYXQiOjE2MTAxNDY1NTYsImV4cCI6MTYxMDE0NzE1Nn0.f4tJkRwCBj_xUOuSNmTNxojcC6ZUB-FoF11ZDFa_W_c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"profile"
 							]
 						}
 					},
