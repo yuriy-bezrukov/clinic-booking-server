@@ -66,66 +66,6 @@
 			]
 		},
 		{
-			"name": "cats",
-			"item": [
-				{
-					"name": "add cat",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"dsfsdfsdf\",\r\n    \"age\": 123,\r\n    \"breed\": \"3rf234\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/cats",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"cats"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get cats",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"dsfsdfsdf\",\r\n    \"age\": 123,\r\n    \"breed\": \"3rf234\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/cats",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"cats"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "auth",
 			"item": [
 				{
