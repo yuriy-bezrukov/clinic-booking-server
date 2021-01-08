@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "61abff5b-dd19-473d-a5c3-1b2fef78bf65",
+		"name": "clinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "add cat Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Vasiy\",\r\n    \"email\": \"qwe@qqwe.qw\",\r\n    \"password\": \"qweqweqwe\",\r\n    \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cats Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"dsfsdfsdf\",\r\n    \"age\": 123,\r\n    \"breed\": \"3rf234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cats",
+			"item": [
+				{
+					"name": "add cat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"dsfsdfsdf\",\r\n    \"age\": 123,\r\n    \"breed\": \"3rf234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"dsfsdfsdf\",\r\n    \"age\": 123,\r\n    \"breed\": \"3rf234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": ""
+		}
+	]
+}
